@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     return new Response('Invalid signature', { status: 403 })
   }
 
-  const response = await fetch(`https://api.github.com/repos/${GITHUB_REPOSITORY}/dispatches`, {
+  const response = await fetch(`https://api.github.com/repos/iammarmirza/${GITHUB_REPOSITORY}/dispatches`, {
     method: 'POST',
     headers: {
         Accept: 'application/vnd.github+json',
