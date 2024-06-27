@@ -1,4 +1,4 @@
-import { validateSignature } from "./signing";
+import { validateSignature } from "@/utils/signing";
 
 export const dynamic = "force-dynamic";
 
