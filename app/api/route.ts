@@ -8,6 +8,7 @@ const HASHNODE_SECRET_KEY = process.env.HASHNODE_SECRET_KEY!
 
 export async function POST(request: Request) {
   const json = await request.json();
+  console.debug("body", json);
 
   const validationResult = validateSignature({
     incomingSignatureHeader: request.headers.get('x-hashnode-signature'),
