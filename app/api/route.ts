@@ -5,3 +5,5 @@ export async function POST(request: Request) {
   console.debug("body", json);
   return new Response(`Hello from ${json}`);
 }
+
+export const runtime = 'nodejs';
