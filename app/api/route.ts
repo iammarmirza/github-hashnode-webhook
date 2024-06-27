@@ -22,10 +22,11 @@ export async function POST(request: Request) {
     return new Response('Invalid signature', { status: 403 })
   }
 
+  console.log("PAT", GITHUB_PERSONAL_ACCESS_TOKEN)
   const response = await fetch(`https://api.github.com/repos/iammarmirza/${GITHUB_REPOSITORY}/dispatches`, {
     method: 'POST',
     headers: {
-        Accept: 'application/vnd.github+json',
+        Accept: 'application/json',
         Authorization: `token ${GITHUB_PERSONAL_ACCESS_TOKEN}`
     },
     body: JSON.stringify({
