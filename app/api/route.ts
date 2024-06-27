@@ -1,9 +1,10 @@
-import { validateSignature } from "@/utils/signing";
+import { validateSignature } from "./signing";
 
 export const dynamic = "force-dynamic";
-const GITHUB_PERSONAL_ACCESS_TOKEN = process.env.GITHUB_PERSONAL_ACCESS_TOKEN as string
-const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY as string
-const HASHNODE_SECRET_KEY = process.env.HASHNODE_SECRET_KEY as string
+
+const GITHUB_PERSONAL_ACCESS_TOKEN = process.env.GITHUB_PERSONAL_ACCESS_TOKEN!
+const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY!
+const HASHNODE_SECRET_KEY = process.env.HASHNODE_SECRET_KEY!
 
 export async function POST(request: Request) {
   const json = await request.json();
