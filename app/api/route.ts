@@ -8,7 +8,6 @@ const HASHNODE_SECRET_KEY = process.env.HASHNODE_SECRET_KEY!
 
 export async function POST(request: Request) {
   const json = await request.json();
-  console.debug("body", json);
 
   const validationResult = validateSignature({
     incomingSignatureHeader: request.headers.get('x-hashnode-signature'),
@@ -25,7 +24,7 @@ export async function POST(request: Request) {
   const response = await fetch(`https://api.github.com/repos/iammarmirza/${GITHUB_REPOSITORY}/dispatches`, {
     method: 'POST',
     headers: {
-        Accept: 'application/json',
+        Accept: 'application/vnd.github+json',
         Authorization: `token ${GITHUB_PERSONAL_ACCESS_TOKEN}`
     },
     body: JSON.stringify({
