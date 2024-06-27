@@ -25,7 +25,7 @@ export async function POST(request: Request) {
   const response = await fetch(`https://api.github.com/repos/iammarmirza/${GITHUB_REPOSITORY}/dispatches`, {
     method: 'POST',
     headers: {
-        Accept: 'application/vnd.github+json',
+        Accept: 'application/json',
         Authorization: `token ${GITHUB_PERSONAL_ACCESS_TOKEN}`
     },
     body: JSON.stringify({
