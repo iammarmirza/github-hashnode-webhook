@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 const GITHUB_PERSONAL_ACCESS_TOKEN = process.env.GITHUB_PERSONAL_ACCESS_TOKEN!
 const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY!
 const HASHNODE_SECRET_KEY = process.env.HASHNODE_SECRET_KEY!
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME!
 
 export async function POST(request: Request) {
   const json = await request.json();
@@ -22,7 +23,7 @@ export async function POST(request: Request) {
     return new Response('Invalid signature', { status: 403 })
   }
 
-  const response = await fetch(`https://api.github.com/repos/iammarmirza/${GITHUB_REPOSITORY}/dispatches`, {
+  const response = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/dispatches`, {
     method: 'POST',
     headers: {
         Accept: 'application/json',
