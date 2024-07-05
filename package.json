@@ -1,5 +1,5 @@
 {
-  "name": "github-hashnode-middleware",
+  "name": "github-hashnode-webhook",
   "version": "0.1.0",
   "private": true,
   "scripts": {
