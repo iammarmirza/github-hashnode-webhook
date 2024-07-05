@@ -6,7 +6,7 @@ This is a serverless function to establish a two way connection from Hashnode to
 
 ### Step 1
 
-Create a Personal access token in your github account with read and workflow permissions like this. Copy it and paste it somewhere safe for future use.
+Create a Personal access token in your github account with repo and workflow permissions like this. Copy it and paste it somewhere safe for future use.
 
 ![](https://raw.githubusercontent.com/iammarmirza/github-hashnode-webhook/main/public/github-pat.png)
 
