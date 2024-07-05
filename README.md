@@ -1,6 +1,6 @@
 # Github Hashnode Middleware
 
-This is a serverless function to establish a two way connection from Hashnode to Github.
+This is a serverless function to convert Hashnode event into a format which is supported by github webhooks.
 
 ## How to set your own serverless function?
 
